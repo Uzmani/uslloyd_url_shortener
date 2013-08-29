@@ -1,0 +1,28 @@
+<div class="container">
+  <h3>This is the long url: <%= @long %></h3>
+  <br>
+  <% if @errors.length > 0 %>
+  <div class="error">
+    <p>Error found!</p>
+    <% @errors.each do |error| %>
+        <p><%= error %> </p>
+    <% end %>
+  </div>
+  <form action="/" method="get">
+      <input type="submit" value="try again">
+  </form>
+  <% else %>
+  <br>
+    <h3>Here is your uslloydified url: <%= @url.short_url %></h3>
+    <form action="/" method="get">
+      <input type="submit" value="create another uslloydified url">
+  </form>
+  <% end %>
+  
+</div>
+
+
+
+
+
+
